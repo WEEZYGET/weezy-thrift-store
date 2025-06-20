@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enquiry - Weezy Thrift Store</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Weezy Thrift Store</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="enquiry.html">Enquiry</a>
+        
+    </nav>
+</header>
+<section class="enquiry-section">
+    <h2>Make an Enquiry</h2>
+    <p>Have a question about a product or want to request something special? Fill out the form below.</p>
+    
+
+<form action="https://formspree.io/f/xanjdqja" method="POST" class="enquiry-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    
+    <!-- Optional: Add a redirect or confirmation -->
+    <input type="hidden" name="_next" value="thank-you.html">
+    
+    <button type="submit">Submit Enquiry</button>
+</form>
+
+
+<footer>
+    <p>&copy; <span id="year"></span> Weezy Thrift Store. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
