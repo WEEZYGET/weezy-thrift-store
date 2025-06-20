@@ -1,0 +1,380 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fefefe;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #1e1e1e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    transition: 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: #ffcc00;
+    color: #1e1e1e;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.3em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: #1e1e1e;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #f0b400;
+}
+
+/* Featured Items */
+.featured {
+    padding: 50px 20px;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+}
+
+.item p {
+    color: #666;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: black;
+    transition: 3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+/* Contact Section */
+.contact {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffcc00;
+}
+
+.contact-form button {
+    background-color: #ffcc00;
+    color: #1e1e1e;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #f0b400;
+}
+
+/* About Section */
+.about {
+    background: #fdfdfd;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-content img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-content div {
+    text-align: left;
+    max-width: 600px;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Responsive About Section */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Fade Slideshow */
+.slider-fade {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fade-slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.fade-slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.fade-slide.active {
+    opacity: 1;
+    z-index: 1;
+    position: relative;
+}
+
+/* Controls */
+.fade-prev, .fade-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.fade-prev:hover, .fade-next:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.fade-prev {
+    left: 10px;
+}
+
+.fade-next {
+    right: 10px;
+}
+
+/* Enquiry Form */
+.enquiry-section {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.enquiry-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.enquiry-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+    border-color: #ffcc00;
+}
+
+.enquiry-form button {
+    background-color: #ffcc00;
+    color: #1e1e1e;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.enquiry-form button:hover {
+    background-color: #f0b400;
+}
+
+.enquiry-form p.hidden {
+    display: none;
+}
+
+.enquiry-form p#enquirySuccess {
+    color: green;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 5opx;
+}
